@@ -160,7 +160,7 @@
 - React Query
 - Javascript
 - Context API
-- React hook form
+- React hook 
 - React Loader Spinner
 
 ### Frontend Project Structure
