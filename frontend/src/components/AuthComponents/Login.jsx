@@ -6,7 +6,7 @@ import { MdMovie } from "react-icons/md";
 
 // from custom files 
 import MyContext from '../../context/MyContext';
-import baseUrl from '../../utils/baseUrl'
+import baseUrl from '../../utils/baseUrl';
 
 
 function Login() {
