@@ -138,7 +138,7 @@
 3. **Configure Base Url or API end points :** This is our api endpoins, comming from backend
 
    ```
-   const baseUrl = "Enter Your own backend api endpoints",
+   const baseUrl = "Enter Your own backend api endpoints", 
    ```
 
 4. **Start the Application:** Run the frontend application.
