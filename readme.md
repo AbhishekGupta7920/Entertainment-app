@@ -5,6 +5,7 @@ The Entertainment App is a user-friendly platform designed for movie and TV seri
 ## Deployment
 
 - **Frontend:** :-   https://entertainment-app-abhi.netlify.app/
+- **Backend:** :-   https://entertainment-web-app-0aqb.onrender.com/
 
 
 ## Important Links
