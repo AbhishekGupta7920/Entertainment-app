@@ -21,7 +21,7 @@ const bookmarkSchema = mongoose.Schema({
     // image field
     image: {
         type: String,
-        required: true
+        required: true,
     },
     // isAdult field
     isAdult: {
