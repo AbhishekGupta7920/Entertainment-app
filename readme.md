@@ -53,7 +53,7 @@ This app is designed to provide a seamless and enjoyable entertainment browsing 
 1.  **Clone the Repository:** Start by cloning the Entertainment App repository to your local machine.
 
     ```sh
-    git clone https://github.com/yourusername/entertainment-app.git
+    git clone https://github.com/AbhishekGupta7920/Entertainment-app
     ```
 
 2.  **Navigate to the Backend Directory:** Move into the backend directory of the project.
