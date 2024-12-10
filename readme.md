@@ -1,11 +1,11 @@
 # Entertainment App
-
+The Entertainment App is a user-friendly platform designed for movie and TV series enthusiasts. It allows users to explore trending content, search for their favorite titles, and bookmark their preferred movies and TV shows for quick access. The app ensures an immersive experience with a clean UI and personalized functionality.
 
 
 ## Deployment
 
-- **Frontend:** :-
-- **Backend:** :-
+- **Frontend:** :-   https://entertainment-app-abhi.netlify.app/
+
 
 ## Important Links
 
@@ -14,12 +14,30 @@
 - Database Design: 
 - Best Practices : 
 
-## Features
+## 📄 Features:
+# Home Page
+Displays trending and recent movies/TV series in an organized grid.
+Search bar to find movies or TV series by title.
+# Movies Page
+Dedicated to showcasing a diverse catalog of movies across various genres.
+Clicking on a movie card directs users to detailed information about the movie.
+# TV Series Page
+Focuses on an extensive collection of TV series, catering to fans of all genres.
+Users can view detailed information about a selected TV series.
+# Bookmarks Page
+Allows users to bookmark their favorite movies and TV series.
+Provides quick access to a personalized entertainment library.
+##  Authentication
+# Sign-Up Page: Enables new users to register for an account (profile image optional).
+# Login Page: Allows returning users to securely log in and access their bookmarks.
 
-- **User Authentication:** Utilizes JWT for secure login and registration, ensuring user data protection.
-- **Media Exploration:** Allows users to discover trending movies and TV shows, with detailed views available for each media item.
-- **Bookmarks:** Enables users to bookmark their favorite media, creating a personalized list of favorites accessible at any time.
-- **Detailed Media Information:** Provides in-depth details about movies and TV shows, including cast, genres, ratings, and more.
+
+## 🛠️ Tools and Technologies:
+Frontend: HTML, CSS, Tailwind CSS, React, Redux Toolkit.
+Backend: Node.js, Express.js, MongoDB.
+API Integration: TMDB API for fetching movie and TV series data.
+This app is designed to provide a seamless and enjoyable entertainment browsing experience, making it easy for users to find, bookmark, and explore their favorite content. 🌟
+
 
 ## Prerequisites
 
