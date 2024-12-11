@@ -9,9 +9,11 @@ const trendingMediaController = async (req, res) => {
         // from req parameters 
         // page , variable name same as in backend routing 
         const { page } = req.params || 1;
+        // console.log(page);
 
         // fetching data  
         const data = await fetchData(trendingMediaUrl + page + `&api_key=${process.env.TMDB_KEY}`);
+        // console.log(data);
 
         // customize response 
         res.status(200).json({
