@@ -4,6 +4,7 @@ import MyContext from '../../context/MyContext';
 // created a tost to show masagges when we login , logout, boolmark, or remove from bookmar
 const Toast = () => {
     const { toast, setToast, toastMessage } = useContext(MyContext);
+    console.log(toastMessage);
 
     useEffect(() => {
         const timer = setTimeout(() => {

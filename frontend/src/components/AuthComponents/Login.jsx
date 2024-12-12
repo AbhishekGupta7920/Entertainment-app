@@ -30,6 +30,7 @@ function Login() {
                 },
                 withCredentials: true,
             });
+            console.log(api.data);
 
             myState.setToast(true);
             myState.setToastMessage(api.data.message)

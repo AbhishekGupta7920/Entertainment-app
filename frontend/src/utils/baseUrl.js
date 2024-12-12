@@ -1,3 +1,3 @@
-const baseUrl = "https://entertainment-app-2-96ub.onrender.com/api" || "http://localhost:8000/api"
+const baseUrl = "https://entertainment-app-4-wtqt.onrender.com/api" || "http://localhost:8000/api"
 
 export default baseUrl;

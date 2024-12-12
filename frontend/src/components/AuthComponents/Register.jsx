@@ -111,7 +111,7 @@ function Register() {
 
                         <button type="submit" className={submitButton}>Submit</button>
                     </form>
-                    <div className='hover:text-cyan-500'>
+                    <div className='hover:text-red-600'>
                         <Link to={'/profile'}>Already Have Account? Login here.</Link>
                     </div>
 
