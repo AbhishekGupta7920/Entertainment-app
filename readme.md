@@ -180,7 +180,7 @@ This app is designed to provide a seamless and enjoyable entertainment browsing 
 - Javascript
 - Context API
 - React hook 
-- React Loader Spinner
+- shimmer ui
 
 ### Frontend Project Structure
 
