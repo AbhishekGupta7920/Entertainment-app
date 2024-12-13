@@ -17,6 +17,37 @@ function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("")
 
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+
+    //     try {
+    //         const api = await axios.post(`${baseUrl}/user/login`, {
+    //             email,
+    //             password
+    //         }, {
+    //             headers: {
+    //                 "Content-Type": "application/json"
+    //             },
+    //             withCredentials: true,
+    //         });
+    //         console.log(api.data);
+
+    //         myState.setToast(true);
+    //         myState.setToastMessage(api.data.message)
+    //         myState.setIsAuthenticated(true);
+
+    //         setTimeout(() => {
+    //             navigate('/')
+    //         }, 1000);
+
+    //     } catch (error) {
+    //         myState.setToast(true);
+    //         myState.setToastMessage(error.response.data.message)
+    //         myState.setIsAuthenticated(false);
+    //     }
+    // }
+
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -30,22 +61,26 @@ function Login() {
                 },
                 withCredentials: true,
             });
-            console.log(api.data);
+            // console.log(api.data); // log response to ensure the token is sent
+// 
+            if (api.data.success) {
+                myState.setToast(true);
+                myState.setToastMessage(api.data.message);
+                myState.setIsAuthenticated(true);
+                // console.log(myState.isAuthenticated);
 
-            myState.setToast(true);
-            myState.setToastMessage(api.data.message)
-            myState.setIsAuthenticated(true);
-
-            setTimeout(() => {
-                navigate('/')
-            }, 1000);
-
+                setTimeout(() => {
+                    navigate('/');
+                }, 1000);
+            }
         } catch (error) {
+            console.error("Error:", error.response);
             myState.setToast(true);
-            myState.setToastMessage(error.response.data.message)
+            myState.setToastMessage(error.response?.data?.message || "Login Failed");
             myState.setIsAuthenticated(false);
         }
-    }
+    };
+
 
     //  variable for css 
     const container = `text-gray-200 p-4`;
@@ -64,7 +99,7 @@ function Login() {
                 <div className={wrapper}>
                     <MdMovie className="text-red-700 text-center text-5xl md:text-6xl" />
                     <h1 className={title}>Login With Email </h1>
-                      {/* signin form */}
+                    {/* signin form */}
                     <form onSubmit={handleSubmit} className={loginForm}>
                         {/* input field for email */}
                         <div className={labelInputWrapper}>
@@ -98,10 +133,10 @@ function Login() {
                                 placeholder="Password"
                             />
                         </div>
-                         {/* submit button */}
+                        {/* submit button */}
                         <button className={submitButton}>Submit</button>
                     </form>
-                        {/* if new user redirect to signup */}
+                    {/* if new user redirect to signup */}
                     <div className='hover:text-red-500'>
                         <Link to={'/profile/register'}>Don't Have Account? Register here.</Link>
                     </div>

@@ -35,7 +35,7 @@ const checkBookmark = async (req, res) => {
 // adding bookmarks 
 const addBookmark = async (req, res) => {
     const { id, title, image, isAdult, mediaType, releaseDate } = req.body;
-
+    // console.log(req.body);
     try {
         const existingBookmark = await Bookmark.findOne({ id });
 

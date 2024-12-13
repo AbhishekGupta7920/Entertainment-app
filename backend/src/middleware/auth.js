@@ -5,21 +5,38 @@ const { User } = require('../models/user.models.js')
 const isAuthenticated = async (req, res, next) => {
 
     const { token } = req.cookies; // cookies  = in built things 
+    // console.log("cookies:- " + req.cookies);
 
     if (!token) return res.status(404).json({
         success: false,
         message: 'Token Not Found, Please Login'
     })
-    //access token from env file
-    const secretToken = process.env.TOKEN;
+    // //access token from env file
+    // const secretToken = process.env.TOKEN;
 
-    const decode = Jwt.verify(token, secretToken);
+    // const decode = Jwt.verify(token, secretToken);
 
-    // we are assigning req.user, a find by findinng from mongodb 
-    req.user = await User.findById(decode._id);
+    // // we are assigning req.user, a find by findinng from mongodb 
+    // req.user = await User.findById(decode._id);
 
-    // now proceed to next 
-    next();
+    // // now proceed to next 
+    // next();
+
+
+    try {
+        const decodedData = Jwt.verify(token, process.env.TOKEN);
+        // console.log("Decoded Data:", decodedData);
+        // req.user = decodedData;
+        req.user = await User.findById(decodedData._id);
+        console.log(req.user);
+        next();
+    } catch (error) {
+        return res.status(401).json({
+            success: false,
+            message: "Invalid Token, Please Login Again",
+            token : token,
+        });
+    }
 }
 
 

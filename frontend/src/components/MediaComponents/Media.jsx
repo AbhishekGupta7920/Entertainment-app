@@ -22,6 +22,10 @@ function Media({ mediaData }) {
     const [bookmarkedIds, setBookmarkedIds] = useState([]);
     const [bookmarkStatus, setBookmarkStatus] = useState(null)
 
+    useEffect(() => {
+        console.log("isAuthenticated:", isAuthenticated);
+    }, [isAuthenticated]);
+
     // fetching bookmark data to find id 
     useEffect(() => {
         if (isAuthenticated) {
@@ -66,7 +70,7 @@ function Media({ mediaData }) {
 
     // adding bookmark
     const postData = async (singleMediaData) => {
-
+         console.log(isAuthenticated);
         if (isAuthenticated) {
             try {
                 // taking data from singleMediaData 
@@ -92,7 +96,7 @@ function Media({ mediaData }) {
                 // window.alert("Bookmark added ")
             } catch (error) {
                 setToast(true)
-                setToastMessage("Error Happened")
+                setToastMessage(error.response?.data?.message || "Error Happened");
                 // window.alert("Error Adding")
                 // console.error("Error posting media data:", error);
             }
@@ -154,4 +158,4 @@ function Media({ mediaData }) {
     )
 }
 
-export default Media
+export default Media                                                                                                                                                                                                                                                                                                                                   
